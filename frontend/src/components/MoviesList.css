@@ -11,35 +11,3 @@ ul li {
   box-sizing: border-box;
   border: 2px solid white;
 }
-
-li header {
-  margin: 1rem 0;
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-  color: white;
-}
-
-li img {
-  max-width: 70%;
-  display: block;
-  margin: auto;
-}
-
-.sinopsys {
-  margin: 1rem 0 0.5rem 0;
-}
-
-.genre {
-  margin: 1rem 0 1rem 0;
-}
-
-p {
-  color: white;
-}
-
-p span {
-  font-size: 1.3rem;
-  font-weight: bold;
-  color: yellow;
-}
