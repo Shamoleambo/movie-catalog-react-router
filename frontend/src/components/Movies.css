@@ -12,6 +12,11 @@ li img {
   margin: auto;
 }
 
+.title-link {
+  text-decoration: none;
+  color: white;
+}
+
 .sinopsys {
   margin: 1rem 0 0.5rem 0;
 }
