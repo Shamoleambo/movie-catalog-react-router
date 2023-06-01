@@ -1,3 +1,4 @@
+import { useLoaderData } from 'react-router-dom'
 import classes from './MovieDetails.module.css'
 
 export async function loader({ params }) {
@@ -7,33 +8,30 @@ export async function loader({ params }) {
 }
 
 export default function MovieDetails() {
+  const movie = useLoaderData()
+
   return (
     <article className={classes.article}>
       <header className={classes.header}>
-        <h1 className={classes.h1}>Movie Title</h1>
-        <h2 className={classes.h2}>Year</h2>
+        <h1 className={classes.h1}>{movie.name}</h1>
+        <h2 className={classes.h2}>{movie.year}</h2>
       </header>
       <figure>
-        <img
-          className={classes.img}
-          src='https://m.media-amazon.com/images/M/MV5BMTUyMDQ1NjY4Ml5BMl5BanBnXkFtZTgwMzA3MDEwNzE@._V1_FMjpg_UX1000_.jpg'
-          alt='Movie Title'
-        />
+        <img className={classes.img} src={movie.imageUrl} alt={movie.name} />
         <figcaption className={classes.figcaption}>
-          Movie Title Poster
+          {movie.name} Poster
         </figcaption>
       </figure>
       <div className={classes.sinopsys}>
         <p>
-          <span>Sinopsys: </span>Lorem ipsum dolor sit amet consectetur,
-          adipisicing elit. Distinctio odit debitis nemo deleniti assumenda,
-          nisi porro magnam minima? Voluptas ipsum deleniti, unde nesciunt
-          laborum ducimus repellat saepe mollitia? Cum, iusto.
+          <span>Sinopsys: </span>
+          {movie.sinopsys}
         </p>
       </div>
       <div className={classes.genre}>
         <p>
-          <span>Genre: </span>Sci-fi
+          <span>Genre: </span>
+          {movie.genre}
         </p>
       </div>
     </article>
