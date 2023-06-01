@@ -1,12 +1,17 @@
-import { Outlet } from 'react-router-dom'
+import { Outlet, Link } from 'react-router-dom'
+import './RootLayout.css'
 
 export default function RootLayout() {
   return (
     <>
-      <header>
-        <h1>Movie Catalog</h1>
+      <header className='main-header'>
+        <Link className='link' to='/'>
+          <h1>Movie Catalog</h1>
+        </Link>
       </header>
-      <Outlet />
+      <main>
+        <Outlet />
+      </main>
     </>
   )
 }
