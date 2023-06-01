@@ -1,0 +1,38 @@
+article {
+  width: 70%;
+}
+
+header {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  font-size: 2rem;
+  color: white;
+}
+
+h2 {
+  color: white;
+}
+
+img {
+  margin: auto;
+  display: block;
+  width: 50%;
+}
+
+figcaption {
+  margin: 0.5rem;
+  text-align: center;
+  color: white;
+}
+
+.sinopsys,
+.genre {
+  display: block;
+  margin: 1rem auto;
+  width: 50%;
+}
