@@ -8,6 +8,12 @@ const PORT = process.env.PORT || 8080
 const app = express()
 connectToDB()
 
+app.use('/movies/:movieId', async (req, res) => {
+  const id = req.params.movieId
+  const movie = await Movie.findById(id)
+  res.status(200).json(movie)
+})
+
 app.use('/', async (req, res) => {
   const movies = await Movie.find()
   res.status(200).json(movies)
