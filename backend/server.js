@@ -1,5 +1,6 @@
 import express from 'express'
 import dotenv from 'dotenv'
+import cors from 'cors'
 import connectToDB from './config/db.js'
 import Movie from './model/Movie.js'
 
@@ -7,6 +8,8 @@ dotenv.config()
 const PORT = process.env.PORT || 8080
 const app = express()
 connectToDB()
+
+app.use(cors())
 
 app.use('/movies/:movieId', async (req, res) => {
   const id = req.params.movieId
