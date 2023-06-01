@@ -1,5 +1,11 @@
 import classes from './MovieDetails.module.css'
 
+export async function loader({ params }) {
+  const data = await fetch(`http://localhost:5000/movies/${params.movieId}`)
+  const movie = await data.json()
+  return movie
+}
+
 export default function MovieDetails() {
   return (
     <article className={classes.article}>
