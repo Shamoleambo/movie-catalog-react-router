@@ -1,0 +1,12 @@
+.main-header {
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid yellow;
+}
+
+header .link {
+  text-decoration: none;
+  color: white;
+}
