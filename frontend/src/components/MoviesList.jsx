@@ -16,6 +16,7 @@ export default function MoviesList() {
       {movies.map((movie) => (
         <Movie
           key={movie._id}
+          movieId={movie._id}
           name={movie.name}
           year={movie.year}
           imageUrl={movie.imageUrl}
