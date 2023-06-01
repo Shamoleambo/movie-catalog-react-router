@@ -1,5 +1,11 @@
 import './MoviesList.css'
 
+export async function loader() {
+  const response = await fetch('http://localhost:5000/')
+  const movies = await response.json()
+  return movies
+}
+
 export default function MoviesList() {
   return (
     <ul>

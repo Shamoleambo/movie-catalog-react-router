@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import RootLayout from './routes/RootLayout'
-import MoviesList from './components/MoviesList'
+import MoviesList, { loader as moviesLoader } from './components/MoviesList'
 import './index.css'
 
 const router = createBrowserRouter([
@@ -12,7 +12,8 @@ const router = createBrowserRouter([
     children: [
       {
         path: '/',
-        element: <MoviesList />
+        element: <MoviesList />,
+        loader: moviesLoader
       }
     ]
   }
